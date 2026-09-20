@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>New listing | Zentra Push</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="assets/theme-boot.js?v=afa40f1e"></script>
+<link rel="stylesheet" href="assets/push.css?v=afa40f1e">
+<link rel="stylesheet" href="assets/push-extra.css?v=afa40f1e">
+<link rel="stylesheet" href="assets/push-images.css?v=afa40f1e">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/zp-favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/zp-icon-192.png">
+<link rel="apple-touch-icon" href="icons/zp-apple-touch-icon.png">
+<link rel="stylesheet" href="assets/zentra-ui.css?v=7277ff13">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="znav"></aside>
+  <main class="main">
+    <div class="top">
+      <div>
+        <h1>New listing</h1>
+        <p>Enter the record once. If the agent holds a Zentra Realty account it is created there too and the two systems stay linked; if not, it lives in Zentra Push only and can be linked later.</p>
+      </div>
+      <span class="badge-demo">INTERACTIVE MOCKUP &middot; SAMPLE DATA</span>
+    </div>
+
+    <div class="note" id="actorNote"></div>
+
+    <div class="flow" id="wiz">
+      <div class="fstep now" id="ws1"><div class="n">STEP 1</div><h4>Listing details</h4><p>The canonical fields and the photos, entered once.</p></div>
+      <div class="fstep" id="ws2"><div class="n">STEP 2</div><h4>Systems</h4><p>Zentra Push always. Zentra Realty when linked.</p></div>
+      <div class="fstep" id="ws3"><div class="n">STEP 3</div><h4>Channels</h4><p>Where it goes, within each channel's terms.</p></div>
+      <div class="fstep" id="ws4"><div class="n">STEP 4</div><h4>Create</h4><p>Record written, then read back.</p></div>
+    </div>
+
+    <h2 class="sec"><span class="num">1</span> Listing details</h2>
+    <div class="card">
+      <div class="frm">
+        <label class="fld"><span>Listing reference <em>auto</em></span>
+          <input id="f_ref" value="ZP-2026-0088" readonly></label>
+        <label class="fld"><span>Listing agent <em>from seat</em></span>
+          <input id="f_agent" readonly></label>
+        <label class="fld wide"><span>Title</span>
+          <input id="f_title" value="Terrace House, Taman Saujana Impian" placeholder="Headline used across every channel"></label>
+        <label class="fld"><span>Listing purpose</span>
+          <select id="f_purpose"><option>For sale</option><option>For rent</option></select></label>
+        <label class="fld"><span>Property type</span>
+          <select id="f_type"><option>Terrace</option><option>Condominium</option><option>Apartment</option><option>Bungalow</option><option>Land</option><option>Agriculture</option><option>Commercial</option></select></label>
+        <label class="fld"><span>Asking price (RM)</span>
+          <input id="f_price" value="760000" inputmode="numeric"></label>
+        <label class="fld"><span>Area</span>
+          <input id="f_loc" value="Kajang, Selangor"></label>
+        <label class="fld"><span>State</span>
+          <select id="f_state"><option>Selangor</option><option>Kuala Lumpur</option><option>Putrajaya</option><option>Negeri Sembilan</option><option>Pahang</option><option>Johor</option><option>Penang</option></select></label>
+        <label class="fld"><span>Tenure</span>
+          <select id="f_tenure"><option>Freehold</option><option>Leasehold</option></select></label>
+        <label class="fld"><span>Built-up (sq ft)</span>
+          <input id="f_built" value="1650"></label>
+        <label class="fld"><span>Land area</span>
+          <input id="f_land" value="22 x 75"></label>
+        <label class="fld"><span>Bedrooms &middot; Bathrooms</span>
+          <input id="f_rooms" value="4 &middot; 3"></label>
+        <label class="fld"><span>Photographs <em>min 6</em></span>
+          <input id="f_images" readonly value=""></label>
+        <label class="fld wide"><span>Description</span>
+          <textarea id="f_desc" rows="3">Terrace house in Taman Saujana Impian, renovated kitchen, covered car porch for two cars. Ten minutes to Kajang SILK interchange.</textarea></label>
+        <label class="fld wide"><span>Highlights <em>one per line</em></span>
+          <textarea id="f_high" rows="3">Renovated kitchen
+Covered porch, 2 cars
+Walking distance to school
+Freehold</textarea></label>
+      </div>
+    </div>
+
+    <h2 class="sec"><span class="num">2</span> Images and hero</h2>
+    <div class="card">
+      <div class="imgwrap">
+        <label class="drop" id="drop">
+          <svg class="dico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"/><path d="m7.5 8.5 4.5-4.5 4.5 4.5"/><path d="M3 15v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3"/></svg>
+          <b>Drop images here or choose files</b>
+          <span class="btn gold small" style="pointer-events:none">Choose images</span>
+          <input type="file" id="f_files" accept="image/*" multiple hidden>
+          <span class="fine">JPG or PNG &middot; at least 1024 &times; 768 &middot; originals only &mdash; no brightness, contrast or filter edits.</span>
+        </label>
+        <div class="herobox">
+          <span class="hlab">Hero image</span>
+          <img id="heroImg" alt="Hero image preview">
+          <span class="hnm" id="heroName"></span>
+          <span class="fine" style="font-size:11.5px;color:var(--ink-3);line-height:1.5">Every portal uses the hero as the listing's main photo. Pick the frame that sells the property.</span>
+        </div>
+      </div>
+      <div class="gal" id="gal"></div>
+      <p class="small muted" id="galNote" style="margin:12px 0 0"></p>
+      <div class="checks">
+        <div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span>Checked on upload: anything under 1024 &times; 768 is flagged before it can become the hero.</span></div>
+        <div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span>No text, watermark or collage on the hero &mdash; PropertyGuru rejects those on the main image.</span></div>
+        <div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span>Mudah applies its own watermark, so never add one yourself.</span></div>
+        <div><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7"/></svg><span>Plan and title-deed images stay private &mdash; never published to a portal.</span></div>
+      </div>
+    </div>
+
+    <h2 class="sec"><span class="num">3</span> Systems this record is created in</h2>
+    <div class="grid g2">
+      <div class="sys" id="sysPush"></div>
+      <div class="sys" id="sysRealty"></div>
+    </div>
+    <div class="note" style="margin-top:14px">Either system can be the point of entry. Zentra Realty&rsquo;s own intake form also publishes here when the agent holds an account on both &mdash; <a href="../zentra-realty/new-listing.html">open the Zentra Realty intake form</a>.</div>
+
+    <h2 class="sec"><span class="num">4</span> Channels</h2>
+    <div class="card">
+      <p class="small muted" style="margin-top:0" id="chanNote"></p>
+      <div class="pick" id="picks"></div>
+    </div>
+
+    <h2 class="sec"><span class="num">4</span> Create the record</h2>
+    <div class="card">
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <button class="btn gold" id="go">Create listing</button>
+        <button class="btn ghost" id="reset">Reset</button>
+        <span class="small muted" id="sum"></span>
+      </div>
+      <div class="res" id="out" style="margin-top:14px"></div>
+    </div>
+
+  </main>
+</div>
+<script src="assets/push-data.js?v=afa40f1e"></script>
+<script src="assets/nav.js?v=afa40f1e"></script>
+<script src="assets/ui.js?v=afa40f1e"></script>
+<script>
+const Z = window.ZP;
+const el = id => document.getElementById(id);
+
+let chosen = new Set();
+let mirror = true;              /* cermin ke Zentra Realty bila berpaut */
+let initDone = false;
+
+/* ---------- MOD EDIT (new.html?edit=MT-0001) ----------
+   Satu borang, dua mod. Selepas simpan, panel keputusan menunjukkan apa yang
+   berlaku pada setiap saluran: kemas kini di tempat, atau menunggu ejen. */
+const EDIT = (new URLSearchParams(location.search)).get('edit') || '';
+const ELA = EDIT ? Z.LISTINGS.find(x => x.id === EDIT) : null;
+if (ELA) Z.ACTOR = Z.SEATS.some(x => x.name === ELA.agent) ? ELA.agent : Z.ACTOR;
+const REALTY0 = JSON.parse(JSON.stringify(Z.SEATS.map(x => x.realty)));  /* pulihkan dlm Reset */
+
+/* --- penukar pelaku (demo): tunjuk kes berpaut vs tiada akaun --- */
+const ACTORS = ['Zahiruddin M.J.', 'New agent seat'];
+
+function actorBar(){
+  const linked = Z.realtyLinked();
+  const s = Z.seat();
+  el('actorNote').innerHTML =
+    '<div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">'
+    + '<b>Acting as</b>'
+    + '<select id="actor" style="padding:7px 10px;border-radius:6px;background:var(--card);color:var(--ink);border:1px solid var(--line)">'
+    + ACTORS.map(a => '<option' + (a === Z.ACTOR ? ' selected' : '') + '>' + a + '</option>').join('')
+    + '</select>'
+    + (linked
+        ? '<span class="chip t-auto">Zentra Realty account linked &middot; ' + s.realty.id + '</span>'
+        : '<span class="chip t-manual">No Zentra Realty account</span>')
+    + '<span class="small muted">Switch the seat to see how the form changes.</span></div>';
+  el('actor').onchange = e => { Z.ACTOR = e.target.value; mirror = true; draw(); };
+}
+
+/* --- sistem --- */
+function drawSystems(){
+  const s = Z.seat();
+  el('sysPush').className = 'sys';
+  el('sysPush').innerHTML =
+    '<div class="chip t-auto">Always on</div>'
+    + '<div class="pt">Zentra Push</div>'
+    + '<div class="pd">The canonical record. This is the system that holds the channel ledger and the evidence trail.</div>';
+
+  if (Z.realtyLinked()){
+    el('sysRealty').className = 'sys';
+    el('sysRealty').innerHTML =
+      '<div class="chip t-auto">Available &middot; linked</div>'
+      + '<div class="pt">Zentra Realty</div>'
+      + '<div class="pd">' + s.name + ' holds Zentra Realty account <b>' + s.realty.id + '</b> (' + s.realty.level + '). The same record is created there and the two stay in sync &mdash; edit on either side.</div>'
+      + '<label class="sw"><input type="checkbox" id="mir" ' + (mirror ? 'checked' : '') + '><span class="track"></span>'
+      + '<b>Also create in Zentra Realty</b></label>';
+    el('mir').onchange = e => { mirror = e.target.checked; drawPicks(); tally(); };
+  } else {
+    el('sysRealty').className = 'sys off';
+    el('sysRealty').innerHTML =
+      '<div class="chip t-manual">Unavailable &middot; no account</div>'
+      + '<div class="pt">Zentra Realty</div>'
+      + '<div class="pd">' + s.name + ' has no Zentra Realty account linked, so the mirror option is hidden and the listing will live in <b>Zentra Push only</b>. Nothing breaks: link an account later and a backfill job creates the Zentra Realty record then.</div>'
+      + '<button class="btn ghost small" id="linkAcct" style="margin-top:12px">Link a Zentra Realty account</button>';
+    el('linkAcct').onclick = () => {
+      /* demo sahaja: pautkan kerusi ini untuk menunjukkan perubahan */
+      s.realty = {linked:true, id:'ZR-AG-0299', level:'Negotiator'};
+      draw();
+    };
+  }
+}
+
+/* --- saluran (gate-aware) --- */
+function drawPicks(){
+  const list = Z.channelsFor();
+  if (!initDone){ list.forEach(c => { if (c.tier === 'AUTO') chosen.add(c.id); }); initDone = true; }
+  chosen.forEach(id => { if (!list.some(c => c.id === id)) chosen.delete(id); });
+  el('picks').innerHTML = list.map(c => {
+    const d = Z.TIER[c.tier];
+    const locked = (c.tier === 'MANUAL') || (c.gate === 'realty' && !mirror);
+    const on = chosen.has(c.id);
+    return '<div class="pcard ' + (locked ? 'locked' : (on ? 'on' : '')) + '" data-id="' + c.id + '">'
+      + '<span class="chip ' + d.cls + '">' + d.label + '</span>'
+      + (locked ? '<span class="tick" style="opacity:.75">' + (c.tier === 'MANUAL' ? 'BLOCKED' : 'OFF') + '</span>'
+                : (on ? '<span class="tick">SELECTED</span>' : ''))
+      + '<div class="pt">' + c.name + '</div>'
+      + '<div class="pd">' + (locked && c.tier === 'MANUAL' ? 'Guard refusal: ' + c.api + '.'
+          : locked ? 'Mirroring is switched off in Step 2.'
+          : c.api) + '</div></div>';
+  }).join('');
+  document.querySelectorAll('.pcard').forEach(p => p.onclick = () => {
+    const c = list.find(x => x.id === p.dataset.id);
+    if (c.tier === 'MANUAL' || (c.gate === 'realty' && !mirror)) return;
+    chosen.has(c.id) ? chosen.delete(c.id) : chosen.add(c.id);
+    drawPicks(); tally();
+  });
+  el('chanNote').innerHTML = Z.realtyLinked()
+    ? 'Grey cards are refused by the compliance guard. Zentra Realty appears because the account is linked.'
+    : 'Grey cards are refused by the compliance guard. Zentra Realty is not listed at all while this agent has no account there.';
+  tally();
+}
+
+function tally(){
+  const list = Z.channelsFor().filter(c => chosen.has(c.id));
+  const a = list.filter(c => c.tier === 'AUTO').length;
+  const s = list.filter(c => c.tier === 'ASSIST').length;
+  const n = list.filter(c => c.tier === 'NATIVE').length;
+  el('sum').textContent = list.length
+    ? list.length + ' channels: ' + a + ' automatic, ' + s + ' needing a human, ' + n + ' portal-side switches'
+    : 'No channels selected.';
+  el('go').disabled = !list.length;
+  el('go').style.opacity = list.length ? 1 : .5;
+}
+
+/* --- cipta (simulasi) --- */
+el('go').onclick = () => {
+  const ref = el('f_ref').value, agent = el('f_agent').value;
+  const title = el('f_title').value || '(untitled)';
+  const price = el('f_price').value;
+  const list = Z.channelsFor().filter(c => chosen.has(c.id));
+  const linked = Z.realtyLinked();
+  const zr = Z.seat().realty.id;
+  const rows = [];
+  const isEdit = !!ELA && ref === ELA.id;
+
+  if (isEdit){
+    rows.push('<div class="resrow"><div><b>Record saved</b><br><span class="small muted">Version ' + ELA.v + ' &rarr; ' + (ELA.v + 1) + '</span></div>'
+      + '<div class="ok">Saved</div><div class="small muted">The listing record is updated. Nothing on any portal has changed yet.</div></div>');
+    const keys = list.map(c => c.id);
+    const atm = keys.filter(k => Z.UPD_MODE(k) === 'auto');
+    const man = keys.filter(k => Z.UPD_MODE(k) !== 'auto');
+    rows.push('<div class="resrow"><div><b>' + atm.length + ' updated in place</b><br><span class="small muted">Feed, API or portal switch</span></div>'
+      + '<div class="ok">Auto</div><div class="small muted">' + (atm.map(k => (Z.CHANNELS.find(c => c.id === k) || {}).name).join(', ') || '&mdash;')
+      + '. Each one keeps its remote id, so this is an update, not a new advert.</div></div>');
+    rows.push('<div class="resrow"><div><b>' + man.length + ' need the agent</b><br><span class="small muted">Prefill, human submits</span></div>'
+      + '<div class="human">Queued</div><div class="small muted">' + (man.map(k => (Z.CHANNELS.find(c => c.id === k) || {}).name).join(', ') || '&mdash;')
+      + '. These are edits to adverts that already exist. Mudah may re-moderate and can charge a republish credit.</div></div>');
+  }
+
+  rows.push('<div class="resrow"><div><b>Zentra Push</b><br><span class="small muted">Canonical record</span></div>'
+    + '<div class="ok">Created</div><div class="small muted">' + ref + ' &middot; ' + title + ' &middot; RM' + price + '</div></div>');
+
+  if (linked && mirror){
+    rows.push('<div class="resrow"><div><b>Zentra Realty</b><br><span class="small muted">Mirrored record</span></div>'
+      + '<div class="ok">Created &middot; linked</div>'
+      + '<div class="small muted">ZR-L-0921 under account ' + zr + '. Two-way link stored, so an edit on either side updates both.</div></div>');
+  } else if (linked){
+    rows.push('<div class="resrow"><div><b>Zentra Realty</b><br><span class="small muted">Mirroring switched off</span></div>'
+      + '<div class="human">Skipped</div><div class="small muted">Account ' + zr + ' is linked; you chose <b>not</b> to mirror this listing.</div></div>');
+  } else {
+    rows.push('<div class="resrow"><div><b>Zentra Realty</b><br><span class="small muted">No linked account</span></div>'
+      + '<div class="human">Not created</div>'
+      + '<div class="small muted">Record kept in Zentra Push only. Link an account later and the backfill creates it without re-typing.</div></div>');
+  }
+
+  let i = 0;
+  const timer = setInterval(() => {
+    if (i >= list.length){
+      clearInterval(timer);
+      const zrLine = (linked && mirror)
+        ? 'Mirrored to Zentra Realty and linked two-way.'
+        : (linked ? 'Zentra Realty mirroring was switched off.' : 'Zentra Realty not created &mdash; no linked account.');
+      const q = 'listing.html?id=' + encodeURIComponent(ref) + '&new=1'
+        + '&t=' + encodeURIComponent(title) + '&p=' + encodeURIComponent(price)
+        + '&a=' + encodeURIComponent(agent) + '&i=' + IMGS.length
+        + '&r=' + ((linked && mirror) ? 1 : 0)
+        + '&ch=' + encodeURIComponent(list.map(c => c.id).join(','));
+      el('out').innerHTML = rows.join('')
+        + '<div style="margin:14px 0 0"><a class="btn gold small" href="' + q
+        + '">View this listing&rsquo;s history and status &rarr;</a></div>'
+        + '<p class="small muted" style="margin:12px 0 0;font-size:11.5px">' + ref + ' written by ' + agent
+        + ' with ' + list.length + ' channel placements. Hero image: ' + (heroImg() ? heroImg().name : 'none') + ' (' + IMGS.length + ' images). ' + zrLine + ' Every placement still needs its read-back confirmation before it counts as live.</p>';
+      el('ws4').className = 'fstep now';
+      document.querySelectorAll('#wiz .fstep').forEach(s => { if (s.id !== 'ws4') s.className = 'fstep'; });
+      return;
+    }
+    const c = list[i++];
+    const cls = c.tier === 'AUTO' ? 'ok' : c.tier === 'ASSIST' ? 'human' : 'human';
+    const txt = c.tier === 'AUTO' ? 'Pushed' : c.tier === 'ASSIST' ? 'Queued for a human' : 'Portal switch';
+    const dt  = c.tier === 'AUTO' ? 'API accepted. Read-back scheduled in 60s.'
+              : c.tier === 'ASSIST' ? 'Prefill ready. No password stored; the agent submits in their own session.'
+              : 'Enable inside the portal account; our ledger tracks the expiry.';
+    rows.push('<div class="resrow"><div><b>' + c.name + '</b><br><span class="small muted">' + c.group + '</span></div>'
+      + '<div class="' + cls + '">' + txt + '</div><div class="small muted">' + dt + '</div></div>');
+    el('out').innerHTML = rows.join('');
+  }, 300);
+};
+
+el('reset').onclick = () => {
+  Z.ACTOR = ACTORS[0]; mirror = true; chosen = new Set(); initDone = false;
+  Z.SEATS.forEach((x, i) => { x.realty = JSON.parse(JSON.stringify(REALTY0[i])); });
+  if (typeof IMGS !== 'undefined') { IMGS.forEach(x => { if (x.url.indexOf('blob:') === 0) URL.revokeObjectURL(x.url); }); IMGS = SEED.map((u, i) => ({name: 'MT-0001-foto-' + (i + 1) + '.jpg', url: u, hero: i === 0, bad: false})); drawImgs(); }
+  el('out').innerHTML = '';
+  el('ws4').className = 'fstep';
+  actorBar(); draw();
+};
+
+function draw(){
+  const s = Z.seat();
+  el('f_agent').value = s.name + ' \u00b7 ' + s.firm;
+  actorBar(); drawSystems(); drawPicks();
+  el('ws2').className = 'fstep now';
+}
+
+/* ---------- imej + hero ---------- */
+const SEED = ['11R_E-xft6V3NGf05YGqKEgTed8Z7WAJK', '1vdU4jmic5VmkRBa04vv6KAEt0Q4pUpNl',
+              '1yfMejiuoq41PPZeN_QWmxrnzojmdLynF', '1IUzGZwmcF6F86t_u7ZWTnPmqv829ntls',
+              '1PpBgYOv9ay3iwsxVtflZOs6_rdSRCMth', '1NLi2ZKIcTDOW8Y4ZOEE_14XqKmp_ioH8']
+             .map(u => 'https://lh3.googleusercontent.com/d/' + u + '=w1000');
+let IMGS = SEED.map((u, i) => ({name: 'MT-0001-foto-' + (i + 1) + '.jpg', url: u, hero: i === 0, bad: false}));
+const MINW = 1024, MINH = 768;
+
+function heroIdx(){ return IMGS.findIndex(x => x.hero); }
+function heroImg(){ const i = heroIdx(); return i < 0 ? null : IMGS[i]; }
+
+function drawImgs(){
+  const h = heroImg();
+  el('heroImg').src = h ? h.url : '';
+  el('heroName').textContent = h ? h.name : 'No image selected';
+  el('f_images').value = IMGS.length + ' image' + (IMGS.length === 1 ? '' : 's') + ' \u00b7 hero ' + (h ? h.name : '\u2014');
+  el('gal').innerHTML = IMGS.map((im, i) =>
+    '<div class="tile' + (im.hero ? ' hero' : '') + (im.bad ? ' bad' : '') + '" data-i="' + i + '">'
+    + '<img src="' + im.url + '" alt="" loading="lazy">'
+    + '<span class="tno">' + (i + 1) + '</span>'
+    + (im.hero ? '<span class="hbadge">HERO</span>' : '')
+    + (im.bad ? '<span class="warn">Under ' + MINW + ' \u00d7 ' + MINH + '</span>' : '')
+    + '<div class="tact">'
+    + '<button class="btn ' + (im.hero ? 'ghost' : 'gold') + ' small" data-act="hero"' + (im.hero ? ' disabled' : '') + '>' + (im.hero ? 'Hero' : 'Set hero') + '</button>'
+    + '<button class="btn ghost small" data-act="del">Remove</button>'
+    + '</div></div>').join('');
+  el('galNote').textContent = IMGS.length + ' image' + (IMGS.length === 1 ? '' : 's')
+    + ' attached \u00b7 the hero is what every portal shows as the main photo.';
+  bindGal();
+}
+
+function bindGal(){
+  el('gal').querySelectorAll('.tile').forEach(t => {
+    const i = +t.dataset.i;
+    t.querySelectorAll('[data-act]').forEach(btn => {
+      btn.onclick = e => {
+        e.preventDefault(); e.stopPropagation();
+        const act = btn.dataset.act;
+        if (act === 'hero') IMGS.forEach((x, k) => { x.hero = (k === i); });
+        else if (act === 'del') { IMGS.splice(i, 1); if (heroIdx() < 0 && IMGS.length) IMGS[0].hero = true; }
+        drawImgs();
+      };
+    });
+  });
+}
+
+/* muat naik sebenar - berfungsi penuh di pelayar */
+function addFiles(files){
+  [...files].forEach(f => {
+    if (!/^image\//.test(f.type)) return;
+    const url = URL.createObjectURL(f);
+    const rec = {name: f.name, url: url, hero: false, bad: false};
+    IMGS.push(rec);
+    const probe = new Image();
+    probe.onload = () => {
+      rec.w = probe.naturalWidth; rec.h = probe.naturalHeight;
+      rec.bad = probe.naturalWidth < MINW || probe.naturalHeight < MINH;
+      drawImgs();
+    };
+    probe.src = url;
+  });
+  if (heroIdx() < 0 && IMGS.length) IMGS[0].hero = true;
+  drawImgs();
+}
+
+const dropEl = el('drop');
+['dragenter', 'dragover'].forEach(ev => dropEl.addEventListener(ev, e => {
+  e.preventDefault(); dropEl.classList.add('over');
+}));
+['dragleave', 'drop'].forEach(ev => dropEl.addEventListener(ev, e => {
+  e.preventDefault(); dropEl.classList.remove('over');
+}));
+dropEl.addEventListener('drop', e => { if (e.dataTransfer && e.dataTransfer.files.length) addFiles(e.dataTransfer.files); });
+el('f_files').addEventListener('change', e => { addFiles(e.target.files); e.target.value = ''; });
+
+drawImgs();
+
+/* ---------- pra-isi untuk mod edit ---------- */
+function prefillEdit(){
+  if (!ELA) return;
+  const set = (id, v) => { const e = el(id); if (e) e.value = v; };
+  set('f_ref', ELA.id);
+  set('f_title', ELA.title);
+  set('f_price', ELA.price.toLocaleString('en-US'));
+  set('f_loc', ELA.location.split(',')[0]);
+  set('f_tenure', 'Freehold');
+  set('f_land', '123,053 sqft');
+  set('f_built', '-');
+  set('f_rooms', '0');
+  set('f_desc', ELA.title + ' in ' + ELA.location + '. Entered once and pushed to every channel the terms allow.');
+  set('f_high', ['Held in the agency listing book', 'Agent: ' + ELA.agent, 'Version v' + ELA.v].join('\n'));
+  const h1 = document.querySelector('.top h1'); if (h1) h1.textContent = 'Edit listing ' + ELA.id;
+  const p = document.querySelector('.top p');
+  if (p) p.textContent = 'Change the record, then decide what to re-push. Saving does not change any advert on its own — each placement is updated when it is re-pushed.';
+  const btn = el('go'); if (btn) btn.textContent = 'Save and re-push';
+  const note = document.createElement('div');
+  note.className = 'note';
+  note.innerHTML = '<b>Editing ' + ELA.id + ' (v' + ELA.v + ').</b> ' + Object.keys(ELA.channels).length
+    + ' channel placement(s) were pushed at older versions. '
+    + Z.staleOf(ELA).length + ' is/are already out of date. Re-pushing updates the <b>existing adverts</b> &mdash; it never creates a second one.';
+  document.querySelector('.top').parentNode.insertBefore(note, document.querySelector('.top').nextSibling);
+}
+
+/* ---------- label langkah + butang ---------- */
+prefillEdit();
+
+draw();
+</script>
+<script src="assets/zentra-ui.js?v=7277ff13" defer></script>
+</body>
+</html>
